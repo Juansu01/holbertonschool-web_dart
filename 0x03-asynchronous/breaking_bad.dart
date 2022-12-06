@@ -1,5 +1,5 @@
 import "package:http/http.dart" as http;
-import 'dart:convert';
+import 'dart:convert' as convert;
 
 printBbCharacters() async {
   var res = Uri.https("breakingbadapi.com", "/api/characters/");
