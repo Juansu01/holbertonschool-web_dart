@@ -9,11 +9,11 @@ calculateTotal() async {
     var price = 0.0;
 
     List<dynamic> productList = jsonDecode(orderData);
-    
-    productList.forEach((product) =>
-      var productPrice = await fetchProductPrice(product);
+
+    for (int i = 0; i < productList.length; i++) {
+      var productPrice = await fetchProductPrice(productList[i]);
       price += num.parse(productPrice);
-    );
+    }
 
     return price;
 
